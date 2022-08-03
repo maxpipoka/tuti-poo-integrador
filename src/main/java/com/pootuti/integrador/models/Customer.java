@@ -11,7 +11,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "customers")
-public class Client {
+public class Customer {
     
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
@@ -24,7 +24,7 @@ public class Client {
     private String names;
 
     @Column(nullable = false)
-    private Calendar birdhDate;
+    private Calendar birthDate;
 
     @Column(nullable = false)
     private Genre genre;
@@ -32,15 +32,15 @@ public class Client {
     @Column(nullable = false)
     private Calendar joinDate;
 
-    public Client(){
+    public Customer(){
 
     }
 
-    public Client(Long idClient, String surnames, String names, Calendar birdhDate, Genre genre, Calendar joinDate) {
+    public Customer(Long idClient, String surnames, String names, Calendar birthDate, Genre genre, Calendar joinDate) {
         this.idClient = idClient;
         this.surnames = surnames;
         this.names = names;
-        this.birdhDate = birdhDate;
+        this.birthDate = birthDate;
         this.genre = genre;
         this.joinDate = joinDate;
     }
@@ -69,12 +69,12 @@ public class Client {
         this.names = names;
     }
 
-    public Calendar getBirdhDate() {
-        return birdhDate;
+    public Calendar getBirthDate() {
+        return birthDate;
     }
 
-    public void setBirdhDate(Calendar birdhDate) {
-        this.birdhDate = birdhDate;
+    public void setBirthDate(Calendar birdhDate) {
+        this.birthDate = birdhDate;
     }
 
     public Genre getGenre() {
