@@ -18,4 +18,25 @@ public class Genre {
     @Column(nullable = false)
     private String genreName;
     
+    public Genre(){
+
+    }
+
+    public Long getIdGenre() {
+        return idGenre;
+    }
+
+    public void setIdGenre(Long idGenre) {
+        this.idGenre = idGenre;
+    }
+
+    public String getGenreName() {
+        return genreName;
+    }
+
+    public void setGenreName(String genreName) {
+        this.genreName = genreName;
+    }
+
+    
 }

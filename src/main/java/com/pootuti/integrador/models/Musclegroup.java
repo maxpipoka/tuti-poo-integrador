@@ -18,4 +18,12 @@ public class Musclegroup {
     @Column(nullable = false)
     private String name;
 
+    public Musclegroup() {
+    }
+
+    public Musclegroup(Long idMuscleGroup, String name) {
+        this.idMuscleGroup = idMuscleGroup;
+        this.name = name;
+    }
+
 }
