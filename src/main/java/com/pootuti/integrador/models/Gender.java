@@ -19,7 +19,6 @@ public class Gender {
     private String genderName;
     
     public Gender(){
-
     }
 
     public Gender(Long idGender, String genderName) {
