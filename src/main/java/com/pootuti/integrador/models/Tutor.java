@@ -4,94 +4,30 @@ import java.util.Calendar;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "tutors")
 public class Tutor extends User{
     
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idTutor;
-
     @Column(nullable = false)
-    private String surnames;
+    private Calendar hiringDate;
 
-    @Column(nullable = false)
-    private String names;
-
-    @Column(nullable = false)
-    private Calendar birthDate;
-
-    @Column(nullable = false)
-    private Gender genre;
-
-    @Column(nullable = false)
-    private Calendar joinDate;
-    
     public Tutor(){
 
     }
 
-    public Tutor(Long idTutor, String surnames, String names, Calendar birthDate, Gender genre, Calendar joinDate) {
-        this.idTutor = idTutor;
-        this.surnames = surnames;
-        this.names = names;
-        this.birthDate = birthDate;
-        this.genre = genre;
-        this.joinDate = joinDate;
+    public Tutor(Long idUser, String names, String surnames, Calendar birthDate, Gender gender, Calendar hiringDate) {
+        super(idUser, names, surnames, birthDate, gender);
+        this.hiringDate = hiringDate;
     }
 
-    public Long getIdTutor() {
-        return idTutor;
+    public Calendar getHiringDate() {
+        return hiringDate;
     }
 
-    public void setIdTutor(Long idTutor) {
-        this.idTutor = idTutor;
+    public void setHiringDate(Calendar hiringDate) {
+        this.hiringDate = hiringDate;
     }
 
-    public String getSurnames() {
-        return surnames;
-    }
-
-    public void setSurnames(String surnames) {
-        this.surnames = surnames;
-    }
-
-    public String getNames() {
-        return names;
-    }
-
-    public void setNames(String names) {
-        this.names = names;
-    }
-
-    public Calendar getBirthDate() {
-        return birthDate;
-    }
-
-    public void setBirthDate(Calendar birthDate) {
-        this.birthDate = birthDate;
-    }
-
-    public Gender getGenre() {
-        return genre;
-    }
-
-    public void setGenre(Gender genre) {
-        this.genre = genre;
-    }
-
-    public Calendar getJoinDate() {
-        return joinDate;
-    }
-
-    public void setJoinDate(Calendar joinDate) {
-        this.joinDate = joinDate;
-    }
-
-    
 }

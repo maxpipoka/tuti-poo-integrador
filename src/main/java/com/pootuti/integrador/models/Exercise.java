@@ -22,6 +22,9 @@ public class Exercise {
     private Musclegroup muscleGroup;
 
     @Column(nullable = false)
+    private Long series;
+
+    @Column(nullable = false)
     private Long repetitions;
 
     @Column(nullable = false)
@@ -31,10 +34,11 @@ public class Exercise {
 
     }
 
-    public Exercise(Long idExercise, String name, Musclegroup muscleGroup, Long repetitions, Long weight) {
+    public Exercise(Long idExercise, String name, Musclegroup muscleGroup, Long series, Long repetitions, Long weight) {
         this.idExercise = idExercise;
         this.name = name;
         this.muscleGroup = muscleGroup;
+        this.series = series;
         this.repetitions = repetitions;
         this.weight = weight;
     }
@@ -77,6 +81,14 @@ public class Exercise {
 
     public void setWeight(Long weight) {
         this.weight = weight;
+    }
+
+    public Long getSeries() {
+        return series;
+    }
+
+    public void setSeries(Long series) {
+        this.series = series;
     }
 
     
