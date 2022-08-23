@@ -1,4 +1,4 @@
-package com.pootuti.integrador.models;
+package com.pootuti.integrador.models.trainings;
 
 import java.util.List;
 

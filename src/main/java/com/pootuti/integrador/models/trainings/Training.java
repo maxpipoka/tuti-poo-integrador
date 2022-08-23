@@ -1,4 +1,4 @@
-package com.pootuti.integrador.models;
+package com.pootuti.integrador.models.trainings;
 
 import java.util.List;
 
@@ -9,6 +9,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import com.pootuti.integrador.models.basic.Customer;
+import com.pootuti.integrador.models.basic.Tutor;
 
 @Entity
 @Table(name = "trainings")

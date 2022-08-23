@@ -1,4 +1,4 @@
-package com.pootuti.integrador.models;
+package com.pootuti.integrador.models.basic;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
