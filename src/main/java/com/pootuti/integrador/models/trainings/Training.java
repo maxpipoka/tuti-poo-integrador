@@ -8,6 +8,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import com.pootuti.integrador.models.basic.Customer;
@@ -24,10 +26,14 @@ public class Training {
     @Column(nullable = true)
     private String name;
 
-    @Column(nullable = true)
+    // @Column(nullable = true)
+    @ManyToOne
+    @JoinColumn(name = "idUser")
     private Customer customer;
 
-    @Column(nullable = true)
+    // @Column(nullable = true)
+    @ManyToOne
+    @JoinColumn(name = "idUser", updatable=false, insertable=false)
     private Tutor tutor;
 
     @Column(nullable = true)
