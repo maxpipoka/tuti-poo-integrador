@@ -3,14 +3,12 @@ package com.pootuti.integrador.models.basic;
 import java.util.Calendar;
 
 import javax.persistence.Column;
-import javax.persistence.Embedded;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.MappedSuperclass;
-import javax.persistence.OneToMany;
 
 @MappedSuperclass
 public class User {

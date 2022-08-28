@@ -23,7 +23,7 @@ public class Exercise {
     // @Column(nullable = false)
     @ManyToOne
     @JoinColumn(name = "idMuscleGroup")
-    private Musclegroup muscleGroup;
+    private MuscleGroup muscleGroup;
 
     @Column(nullable = false)
     private Long series;
@@ -38,7 +38,7 @@ public class Exercise {
 
     }
 
-    public Exercise(Long idExercise, String name, Musclegroup muscleGroup, Long series, Long repetitions, Long weight) {
+    public Exercise(Long idExercise, String name, MuscleGroup muscleGroup, Long series, Long repetitions, Long weight) {
         this.idExercise = idExercise;
         this.name = name;
         this.muscleGroup = muscleGroup;
@@ -63,11 +63,11 @@ public class Exercise {
         this.name = name;
     }
 
-    public Musclegroup getMuscleGroup() {
+    public MuscleGroup getMuscleGroup() {
         return muscleGroup;
     }
 
-    public void setMuscleGroup(Musclegroup muscleGroup) {
+    public void setMuscleGroup(MuscleGroup muscleGroup) {
         this.muscleGroup = muscleGroup;
     }
 
