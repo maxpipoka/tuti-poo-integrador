@@ -26,4 +26,21 @@ public class MuscleGroup{
         this.name = name;
     }
 
+    public Long getIdMuscleGroup() {
+        return idMuscleGroup;
+    }
+
+    public void setIdMuscleGroup(Long idMuscleGroup) {
+        this.idMuscleGroup = idMuscleGroup;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    
 }

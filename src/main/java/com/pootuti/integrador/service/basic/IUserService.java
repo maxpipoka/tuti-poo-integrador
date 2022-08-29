@@ -10,7 +10,7 @@ public interface IUserService {
 
     public User findUser(Long idUser);
 
-    public void deleteUse(Long idUser);
+    public void deleteUser(Long idUser);
 
     public List<User> getUsers();
 }

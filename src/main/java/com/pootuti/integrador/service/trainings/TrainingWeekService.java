@@ -29,7 +29,7 @@ public class TrainingWeekService implements ITrainingWeekService{
     }
 
     @Override
-    public void saveTrainigWeek(TrainingWeek trainingWeek) {
+    public void saveTrainingWeek(TrainingWeek trainingWeek) {
         trainingWeekRepository.save(trainingWeek);
     }
 }
